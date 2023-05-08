@@ -1008,7 +1008,7 @@ bool VulkanExampleBase::initVulkan()
 			selectedDevice = index;
 		}
 	}
-	if (commandLineParser.isSet("gpulist")) {
+	//if (commandLineParser.isSet("gpulist")) {
 		std::cout << "Available Vulkan devices" << "\n";
 		for (uint32_t i = 0; i < gpuCount; i++) {
 			VkPhysicalDeviceProperties deviceProperties;
@@ -1017,7 +1017,7 @@ bool VulkanExampleBase::initVulkan()
 			std::cout << " Type: " << vks::tools::physicalDeviceTypeString(deviceProperties.deviceType) << "\n";
 			std::cout << " API: " << (deviceProperties.apiVersion >> 22) << "." << ((deviceProperties.apiVersion >> 12) & 0x3ff) << "." << (deviceProperties.apiVersion & 0xfff) << "\n";
 		}
-	}
+	//}
 #endif
 
 	physicalDevice = physicalDevices[selectedDevice];
